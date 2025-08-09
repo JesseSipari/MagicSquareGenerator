@@ -15,7 +15,6 @@ int getSquareSize() {
     std::cin >> square_size;
     return square_size;
 }
-// TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 int main() {
     int s_size;
     s_size = getSquareSize();

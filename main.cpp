@@ -13,20 +13,31 @@ vector<vector<int>> initSquare(const int square_size) {
     return square;
 }
 
-void createDoublyEvenSquare(vector<vector<int>> &square, const int size) {
+void createDoublyEvenSquare(vector<vector<int>> &sqr, const int size) {
     int num = 1;
     for (int row = 0; row < size; row++) {
         for (int col = 0; col < size; col++) {
-            square[row][col] = num++;
+            sqr[row][col] = num++;
         }
     }
     for (int row = 0; row < size; row++) {
         for (int col = 0; col < size; col++) {
             if (!((row % 4 == col % 4) || (row % 4 + col % 4 ==3 ))) {
-                square[row][col] = size * size - square[row][col] + 1;
+                sqr[row][col] = size * size - sqr[row][col] + 1;
             }
         }
     }
+}
+
+void createSinglyEvenSquare(vector<vector<int>> &sqr, const int size) {
+    /* TODO: Implement the method for singly even squares
+     *  1. Divide the square into four quadrants of size/2
+     *  2. Fill the quadrants with odd squares using the Siamese method using different starting values
+     *  3. Swap the necessary columns between the left quadrants and the right quadrants
+     *     according to the algorithm for singly even magic squares
+     *  4. Handle the middle column swap separately
+     *
+     */
 }
 
 void createOddSquare(vector<vector<int>> &sqr, const int size) {
